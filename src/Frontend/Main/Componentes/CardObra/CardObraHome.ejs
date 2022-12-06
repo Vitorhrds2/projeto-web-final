@@ -1,0 +1,20 @@
+<div class="card mb-5" style="width: 800px; border-radius: 20px;">
+    <img src="/imagens/PaginaPrincipal/buenaVista.jpg" class="card-img-top p-0"
+        style="height: 18rem; border-top-left-radius: 20px; border-top-right-radius: 20px;" alt="...">
+    <div class="card-body" style="align-self: flex-start;">
+        <h4 class="card-title mb-0" style="text-align: left;"><%= name %></h4>
+        <h6 class="local"> <%= city_id %> </h6>
+        <div class="d-flex w-100 justify-content-start">
+            <span class="btn btn-primary mr-2"
+                style="background-color: #FF8B22; border-color: #FF8B22; font-size: x-small;" type="submit">+
+                Pintor</span> <span class="btn btn-primary mr-2"
+                style="background-color: #FF8B22; border-color: #FF8B22; font-size: x-small;" type="submit">+
+                Apartamentos</span> <span class="btn btn-primary mr-2"
+                style="background-color: #FF8B22; border-color: #FF8B22; font-size: x-small;" type="submit">+ Mestre de
+                obras</span>
+        </div>
+        <p class="card-text" style="text-align: start;"><%= description %></p>
+        <a href="/obra/<%= id %>" class="btn btn-primary"
+            style="background: linear-gradient(to right, #006B3F, #079D56); border: #006B3F;">Saiba Mais</a>
+    </div>
+</div>

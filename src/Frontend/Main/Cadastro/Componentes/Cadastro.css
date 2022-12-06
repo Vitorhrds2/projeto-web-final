@@ -1,0 +1,236 @@
+@import url('https://fonts.cdnfonts.com/css/averta-blackitalic');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+a,
+button {
+    cursor: revert;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    font-family: 'Averta-Regular', sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(to right, #006B3F, #82EA5B);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.register-card {
+    width: 450px;
+    background: rgba(255, 255, 255, .5);
+    padding: 3rem;
+    border-radius: 10px;
+    position: relative;
+    margin-top: 1rem;
+}
+
+.register-card::before {
+    content: '';
+    position: absolute;
+    background: rgba(255, 255, 255, .15);
+    inset: 0;
+    transform: rotate(-5deg);
+    z-index: -1;
+}
+
+.register-card-logo {
+    margin-bottom: 2rem;
+}
+
+.register-card-logo img {
+    width: 150px;
+    height: 100%;
+}
+
+.register-card-logo,
+.register-card-header,
+.register-card-footer {
+    text-align: center;
+}
+
+.register-card a {
+    text-decoration: none;
+    color: #35339a;
+}
+
+.register-card a:hover {
+    text-decoration: underline;
+}
+
+.register-card-header {
+    margin-bottom: 2rem;
+}
+
+.register-card-header h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: .5rem;
+}
+
+.register-card-header h1+div {
+    font-size: calc(1rem * .8);
+    opacity: .8;
+}
+
+.register-card-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.register-card-form .form-item {
+    position: relative;
+}
+
+.register-card-form .form-item .form-item-icon {
+    position: absolute;
+    top: .82rem;
+    left: 1.4rem;
+    font-size: 1.3rem;
+    opacity: .4;
+}
+
+.register-card-form .checkbox {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.register-card-form .form-item-other {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: calc(1rem * .8rem);
+    margin-bottom: .5rem;
+}
+
+.register-card-footer {
+    margin-top: 1.5rem;
+    font-size: calc(1rem * .8rem);
+}
+
+.register-card input[type="text"],
+.register-card input[type="password"],
+.register-card input[type="email"] {
+    border: none;
+    outline: none;
+    background: rgba(255, 255, 255, .3);
+    padding: 1rem 1.5rem;
+    padding-left: calc(1rem * 3.5);
+    border-radius: 100px;
+    width: 100%;
+    transition: background .5s;
+}
+
+.register-card input:focus {
+    background: white;
+}
+
+.register-card input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: black;
+}
+
+.register-card-form button {
+    background: black;
+    color: white;
+    padding: 1rem;
+    border-radius: 100px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: background .5s;
+}
+
+.register-card-form button:hover {
+    background-color: rgba(0, 0, 0, .85);
+    cursor: pointer;
+}
+
+.register-card-social {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.register-card-social>div {
+    opacity: .8;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: calc(1rem * .8);
+}
+
+.register-card-social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.register-card-social-btn a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, .6);
+    border-radius: 100px;
+    transition: all .5s;
+}
+
+.register-card-social-btn a:hover {
+    background: white;
+    transform: scale(1.1);
+}
+
+
+.img{
+    text-align:center;
+    margin-bottom: 55px;
+}
+
+.img input{
+    display: none;
+}
+
+.img label{
+    cursor:pointer;
+}
+
+#imageName{
+    color:green;
+}
+
+#incorrect-data{
+    color: red;
+    font-size: small;
+}
+
+/* Responsividade */
+
+@media (max-width: 768px) {
+    body {
+        padding: 2rem 0;
+    }
+
+    .register-card {
+        width: 350px;
+        padding: 2rem;
+    }
+
+    .register-card-container {
+        width: 400px;
+    }
+}

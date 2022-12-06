@@ -1,0 +1,71 @@
+<div class="container-fluid printipal-container">
+    <div class="row">
+        <aside class="col-2 aside-filter" style="width: 100%">
+            <form action="" method="get">
+                <h2>Filtros</h2>
+                <section>
+                    <h3>Região</h3>
+                    <label for="state">Estado</label>
+                    <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                        <option value="selecione">Selecione</option>
+                        <option value="parana">Paraná</option>
+                        <option value="sao-paulo">São Paulo</option>
+                        <option value="minas-gerais">Minas Gerais</option>
+                        <option value="bahia">Bahia</option>
+                        <option value="ceara">Ceará</option>
+                    </select>
+                    <label for="city">Cidade</label>
+                    <select name="city" id="city">
+                        <option value="selecione">Selecione</option>
+                        <option value="foz">Foz do Iguaçu</option>
+                        <option value="sao-paulo">São Paulo</option>
+                        <option value="bh">Belo Horizonte</option>
+                        <option value="for">Fortaleza</option>
+                    </select>
+                </section>
+                <section>
+                    <h3>Tags</h3>
+                    <div class="tags-active">
+                        <button type="button" class="btn-tag">+ Gesso</button> <button type="button"
+                            class="btn-tag">+ construtor</button>
+
+                    </div>
+                    <div class="tags-disable">
+                        <button type="button" class="btn-tag-i">+ Pintor </button> <button type="button"
+                            class="btn-tag-i">+ hidráulica </button>
+
+                    </div>
+                </section>
+                <section>
+                    <h3>Categoria do imóvel</h3>
+                    <label for="imovel">Tipo de imóvel</label>
+                    <select name="city" id="city">
+                        <option value="selecione">Selecione</option>
+                        <option value="apartamentos">apartamentos</option>
+                        <option value="lote">loteamento</option>
+                    </select>
+                    <label for="imovel">Estágio da obra</label>
+                    <select name="city" id="city">
+                        <option value="selecione">Selecione</option>
+                        <option value="terraplanagem">terraplanagem</option>
+                        <option value="fundacao">fundação</option>
+                        <option value="iniciada">obra iniciada</option>
+                        <option value="avancada">obras avançadas</option>
+                        <option value="acabamento">acabamento</option>
+                    </select>
+                </section>
+                <button type="submit">Filtrar</button>
+            </form>
+        </aside>
+        <main class="col-10"> <!--  Conteúdo principal da página  -->
+            <div class="row">
+                <p class="results">Resultados para: <span>condomínios residenciais</span></p>
+            </div>
+            <div class="row">
+                <% for(let i = 0; i < obras.length; i++){ %>
+                    <%- include('../Componentes/CardObra/CardObra', obras[i]) %>
+                <% } %>
+            </div>
+        </main>
+    </div>
+</div>

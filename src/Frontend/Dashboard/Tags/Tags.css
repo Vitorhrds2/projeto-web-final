@@ -1,0 +1,46 @@
+.row-tags {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cardFormTag {
+    background: linear-gradient(355.23deg, #FF8B22 7.7%, #FFB719 82.04%);
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 30%;
+    margin: 5px;
+    padding: 10px
+}
+
+.cardFormTag input {
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #FF8B22;
+    color:black
+}
+
+.cardFormTag > .actionButtons {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.cardFormTag  button {
+    border-radius: 5px;
+    background: linear-gradient(11.16deg, #006B3F 0%, #079D56 111.35%);
+    border: solid 1px #006B3F;
+    color: white;
+    font-weight: bold;
+    padding: 5px 10px;
+}
+
+.exclusao {
+    border-radius: 5px;
+    border: solid 1px #006B3F;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 5px 10px;
+    background-color: rgb(181, 31, 31);
+}

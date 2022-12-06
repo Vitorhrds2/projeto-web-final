@@ -1,0 +1,63 @@
+    <div class="register-card-container">
+        <div class="register-card">
+            <div class="register-card-logo">
+                <img src="/imagens/Logo-Gradiente.png" alt="Logo">
+            </div>
+            <div class="register-card-header">
+                <h1>Dados do Dono</h1>
+            </div>
+            <form class="register-card-form" method="post" action="">
+                <div class="form-item">
+                    <span>Nome do dono</span>
+                    <input type="text" placeholder="Nome do Dono" name="nomeDono" required autofocus>
+                    <% if(error.nomeDono) {%>
+                        <span id="incorrect-data"><%= error.nomeDono %></span>
+                    <% }%>
+                </div>
+                <div class="form-item">
+                    <span>Cpf</span>
+                    <input type="text" id="cpf_dono" placeholder="Cpf do Dono" name="cpfDono" maxlength="14" required>
+                    <% if(error.cpfDono){%>
+                        <span id="incorrect-data"><%= error.cpfDono %></span>
+                    <% }%>
+                </div>
+                <div class="form-item">
+                    <span>Telefone do dono</span>
+                    <input type="text" id="tel_dono" placeholder="Telefone do Dono" name="telDono" maxlength="16" required>
+                    <% if(error.telDono){%>
+                        <span id="incorrect-data"><%= error.telDono %></span>
+                    <% }%>
+                </div>
+                <button type="submit">Continuar</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        const cpf_dono = document.querySelector('#cpf_dono')
+
+        cpf_dono.addEventListener('keypress', () => {
+            let cpf_donolength = cpf_dono.value.length
+
+            if (cpf_donolength === 3 || cpf_donolength === 7){
+                cpf_dono.value += '.'
+            }else if (cpf_donolength === 11){
+                cpf_dono.value += '-'
+            }
+        })
+
+        const tel_dono = document.querySelector('#tel_dono')
+
+        tel_dono.addEventListener('keypress', () => {
+            let tel_donolength = tel_dono.value.length
+
+            if (tel_donolength === 0){
+                tel_dono.value += "("
+            }else if (tel_donolength === 3){
+                tel_dono.value += ") "
+            }else if (tel_donolength === 6){
+                tel_dono.value += " "
+            }else if (tel_donolength === 11){
+                tel_dono.value += "-"
+            }
+        })
+    </script>

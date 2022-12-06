@@ -1,0 +1,137 @@
+<main class="col-8">
+    <!--  Conteúdo principal da página  -->
+    <h1>Usuário</h1>
+    <div class="container">
+        <center>
+            <div class="container-foto">
+                <label for="file-input">
+                    <img class="imagensFoto" src="../../../../imagens/Usuario/empreiteiro-1.jpg" width="200">
+
+                    <div class="middle">
+                        <div class="">
+                            <img src="../../../../imagens/Usuario/edit-icon-png.png" width="140">
+                </label>
+                <input id="file-input" type="file" hidden />
+            </div>
+    </div>
+    </div>
+    </center><br><br>
+
+
+    <div class="input-group mb-3">
+        <form method="post">
+            <div class="row" id="row">
+                <div class="col-12">
+                    <label>Razão social:</label>
+                    <br>
+                    <input type="text" class="form-control" placeholder="Digite a razão social" aria-label="Username"
+                        aria-describedby="basic-addon1" name="razaoSocial" required>
+                    <% if(error.razaoSocial) {%>
+                        <span class="incorrect-data"><%= error.razaoSocial %></span>
+                    <% } %>
+                </div>
+                <div class="col-9">
+                    <label>CNPJ:</label>
+                    <br>
+                    <input type="text" class="form-control" placeholder="Digite o CNPJ:" aria-label="Username"
+                        aria-describedby="basic-addon1" name="cnpj" required>
+                        <% if(error.cnpj) {%>
+                            <span class="incorrect-data"><%= error.cnpj %></span>
+                        <% } %>
+                </div>
+                <div class="col-6">
+                    <label>Número de Funcionários:</label>
+                    <br>
+                    <input type="text" class="form-control" placeholder="Digite o número de funcionários:"
+                        aria-label="Username" name="numFuncionarios" aria-describedby="basic-addon1" required>
+                        <% if(error.numFuncionarios) {%>
+                            <span class="incorrect-data"><%= error.numFuncionarios %></span>
+                        <% } %>
+                </div>
+                <div class="col-6">
+                    <label>Telefone:</label>
+                    <br>
+                    <input type="text" class="form-control" placeholder="Digite o telefone:"
+                        aria-label="Amount (to the nearest dollar)" name="telEmpresa" required>
+                        <% if(error.telEmpresa) {%>
+                            <span class="incorrect-data"><%= error.telEmpresa %></span>
+                        <% } %>
+                </div>
+                <div class="col-6">
+                    <label>E-mail:</label>
+                    <br>
+                    <input type="text" class="form-control" placeholder="Digite o e-mail:"
+                        aria-label="Amount (to the nearest dollar)" name="email" required>
+                        <% if(error.email) {%>
+                            <span class="incorrect-data"><%= error.email %></span>
+                        <% } %>
+                </div>
+                <div class="col-6">
+                    <label>Senha:</label>
+                    <br>
+                    <input type="password" class="form-control" placeholder="Digite uma senha"
+                        aria-label="Amount (to the nearest dollar)" name="password" required>
+                        <% if(error.password) {%>
+                            <span class="incorrect-data"><%= error.password %></span>
+                        <% } %>
+                </div>
+                <div class="col-9">
+                    <label for="nomeDono">Nome do dono:</label><br>
+                    <input type="text" class="form-control" id="nomeDono" placeholder="Digite o nome do dono:"
+                        aria-label="Amount (to the nearest dollar)" name="nomeDono" required>
+                        <% if(error.nomeDono) {%>
+                            <span class="incorrect-data"><%= error.nomeDono %></span>
+                        <% } %>
+                </div>
+                <div class="col-6">
+                    <label>CPF do dono:</label>
+                    <br>
+                    <input type="text" class="form-control" placeholder="Digite o CPF do dono:"
+                        aria-describedby="basic-addon3" name="cpfDono" required>
+                        <% if(error.cpfDono) {%>
+                            <span class="incorrect-data"><%= error.cpfDono %></span>
+                        <% } %>
+                </div>
+                <div class="col-6">
+                    <label>Telefone do dono:</label>
+                    <br>
+                    <input type="text" class="form-control" placeholder="Digite o telefone do dono:"
+                        aria-describedby="basic-addon3" name="telDono" required>
+                        <% if(error.telDono) {%>
+                            <span class="incorrect-data"><%= error.telDono %></span>
+                        <% } %>
+                </div>
+                <div class="col-6">
+                    <label>E-mail do contador:</label>
+                    <br>
+                    <input type="text" class="form-control" placeholder="Digite o e-mail do contador:"
+                        aria-describedby="basic-addon3" name="emailContador" required>
+                        <% if(error.emailContador) {%>
+                            <span class="incorrect-data"><%= error.emailContador %></span>
+                        <% } %>
+                </div>
+                <div class="col-6">
+                    <label>Telefone do contador:</label>
+                    <br>
+                    <input type="text" class="form-control" placeholder="Digite o telefone do contador"
+                        aria-describedby="basic-addon3" name="telContador" required>
+                        <% if(error.telContador) {%>
+                            <span class="incorrect-data"><%= error.telContador %></span>
+                        <% } %>
+                </div>
+                    <div class="col-12 d-flex justify-content-center">
+                        <a href="/dashboard/usuarios/">
+                            <input type="submit" id="button" class="btn btn-success" value="Salvar">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+    </div>
+    </center>
+    <center>
+        
+    </center><br><br>
+    </div>
+</main>

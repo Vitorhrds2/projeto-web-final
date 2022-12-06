@@ -1,0 +1,135 @@
+@import url('https://fonts.cdnfonts.com/css/averta-blackitalic');
+
+main{
+    justify-content: center;
+    font-family: 'Averta-Regular', sans-serif;
+}
+
+* {
+    font-family: 'Averta-Regular', sans-serif;
+}
+
+#A {
+    margin-left: 20px; 
+    margin-top: 70px;
+    font-size: 30px; 
+}
+
+#B {
+    margin-bottom: 50px;
+    margin-left: 20px; 
+    color: #006B3F;
+   
+}
+
+#BB {
+    border-bottom: 5px solid rgb(168, 166, 166);
+    width: 1300px;
+    margin-left: 75px;
+
+}
+
+#C { 
+    margin-left: 450px; 
+    margin-top: 70px;
+    color: #006B3F;
+}
+
+
+#D {
+    margin-left: 20px;
+    font-size: 25px; 
+}
+
+
+#E {
+    margin-left: 470px; 
+    margin-top: 70px;
+    color: #006B3F;
+}
+
+
+#F {
+    margin-left: 20px; 
+    font-size: 25px;
+}
+
+
+#G {
+    margin-left: 10px; 
+    margin-top: 70px;
+    color: #006B3F;
+    font-size: 40px;
+}
+
+
+#H {
+    margin-left: 20px; 
+    margin-bottom: 30px;
+    
+}
+
+.descricao {
+    background-color: rgba(216, 216, 216, 0.5);
+    width: 1200px;
+    border-radius: 10px;
+    margin-left: 125px;
+}
+
+.descricao2 {
+    background-color: rgba(216, 216, 216, 0.5);
+    width: 1100px;
+    border-radius: 10px;
+}
+
+.descricao3 {
+    background-color: rgba(216, 216, 216, 0.5);
+    width: 1150px;
+    border-radius: 10px;
+}
+
+#samuel {
+    margin-left: 70px;
+    margin-top: 150px;
+}
+
+#V {
+    margin-left: 250px;
+}
+
+.video {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center !important;
+    align-items: center;
+}
+
+footer {
+    background: linear-gradient(11.16deg, #006B3F 0%, #079D56 111.35%);
+    color: white;
+
+    padding: 20px 0px;
+}
+
+footer h3 {
+    border-bottom: white solid 1px;
+}
+
+footer .col-6 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer ul {
+    list-style-type: none;
+}
+
+footer ul a {
+    color: white;
+}
+footer ul a:hover {
+    color: white;
+}

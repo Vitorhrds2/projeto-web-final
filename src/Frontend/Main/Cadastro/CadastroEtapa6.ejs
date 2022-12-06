@@ -1,0 +1,27 @@
+<body>
+    <div class="register-card-container">
+        <div class="register-card">
+            <div class="register-card-logo">
+                <img src="/imagens/Logo-Gradiente.png" alt="Logo">
+            </div>
+            <div class="register-card-header">
+                <h1>Logo da Empresa</h1>
+            </div>
+            <form class="register-card-form" method="post">
+                <div class="img">
+                    <label for="inputTag">
+                        Select Image <br />
+                        <i class="fa fa-2x fa-camera"></i>
+                        <input id="inputTag" type="file" name="foto"/>
+                        <br />
+                        <span id="imageName"></span>
+                        
+                    </label>
+                    <% if(error.img){%>
+                        <span id="incorrect-data"><%= error.img %></span>
+                    <% }%>
+                </div>
+                <button type="submit" onclick="return enviarCadastro()">Finalizar Cadastro</button>
+            </form>
+        </div>
+    </div>

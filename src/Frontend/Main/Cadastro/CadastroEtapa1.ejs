@@ -1,0 +1,49 @@
+    <div class="register-card-container">
+        <div class="register-card">
+            <div class="register-card-logo">
+                <img src="/imagens/Logo-Gradiente.png" alt="Logo">
+            </div>
+            <div class="register-card-header">
+                <h1>Cadastre-se</h1>
+            </div>
+            <form class="register-card-form" method="post" action="">
+                <div class="form-item">
+                    <span id="form-item-icon" class="material-symbols-outlined">mail</span>
+                    <input type="email" placeholder="Digite Seu E-mail" name="email"
+                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required autofocus>
+                    <% if(error.email) {%>
+                        <span id="incorrect-data"><%= error.email %></span>
+                    <% }%>
+                </div>
+                <div class="form-item">
+                    <span id="form-item-icon" class="material-symbols-outlined">lock</span>
+                    <input type="password" placeholder="Digite Sua Senha" required name="password">
+                    <% if(error.password) {%>
+                        <span id="incorrect-data"><%= error.password %></span>
+                    <% }%>
+                </div>
+                <button type="submit">Continuar</button>
+            </form>
+        </div>
+        <div class="register-card-social">
+            <div>Cadastrar com:</div>
+            <div class="register-card-social-btn">
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-facebook"
+                        width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3"></path>
+                    </svg>
+                </a>
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-google" width="24"
+                        height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M17.788 5.108a9 9 0 1 0 3.212 6.892h-8"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>

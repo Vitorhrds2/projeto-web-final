@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head> <!-- Head com imports Boostrap, css e js -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="/frontend/Main/EdicaoUsuario/EdicaoUsuario.css">
+    <title>Edição Usuário</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg shadow p-3  bg-white rounded sticky-top"> <!-- Navbar com principais links do site -->
+        <div class="container-fluid h-100">
+            <a class="navbar-brand h-100 d-flex align-items-center" href="/">
+                <img src="/imagens/Logo-Gradiente.png" alt="Logo" width="100" style="margin-left: 100px;">
+            </a>
+            <!--barra de pesquisa-->
+            <form class="d-flex w-50" role="search">
+                <input class="form-control me-2" type="search" placeholder="buscar" aria-label="buscar">
+                <button class="btn btn-outline-success" type="submit">buscar</button>
+            </form>
+            <a href="#" class="btn btn-info btn-lg" style="background-color: #FF8B22; border-color: #FF8B22;"
+                role="button">Acesse sua conta</a>
+            <!--botão para o usuário fazer o cadastro-->
+            </a>
+        </div>
+        </div>
+    </nav>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-3" id="left">
+                <div class="row">
+                    <aside class="aside-nav"> <!-- Aside com navegação entre os módulos de edição de usuário -->
+                        <div class="form-group">
+                            <img src="/imagens/Avatar.svg" alt="Logo">
+                            <br>
+                            <label>Usuário</label>
+                            <input type="text" class="form-control" value="Sérgio Abreu">
+                        </div>
+                        <nav>
+                            <ul>
+                                <li>
+                                    <a href="/usuario/empresa">
+                                        <button type="button" id="btn" class="btn btn-outline-success">Dados da
+                                            Empresa</button>
+                                    </a>
+                                    
+                                </li>
+                                <li>
+                                    <a href="/usuario/dono">
+                                        <button type="button" id="btn" class="btn btn-outline-success">Dados do
+                                            Dono</button>
+                                    </a>
+                                </li>
+                                <li class="active">
+                                    <a href="/usuario/contador">
+                                        <button type="button" id="btn" class="btn btn-success">Dados do Contador</button>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </aside>
+                </div>
+            </div>
+            <div class="col-9">
+                <div class="row" id="right-top">
+                    <h1>Dados do Contador</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+                <div class="row" id="right-down">
+                    <div class="edit-card">
+                        <form class="edit-card-form" method="get" action="">
+                            <div class="form-group" id="input">
+                                <label for="exampleInputEmail1">E-mail do Contador</label>
+                                <input type="text" class="form-control" id="exampleInputEmail1" value="123@123.com">
+                            </div>
+                            <div class="form-group" id="input">
+                                <label for="exampleInputEmail1">Telefone do Contador</label>
+                                <input type="text" class="form-control" id="exampleInputEmail1"
+                                    value="(11) 83331-7008 ">
+                            </div>
+                            <button type="submit" id="btn-save" class="btn btn-success">Salvar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+</body>
+
+</html>

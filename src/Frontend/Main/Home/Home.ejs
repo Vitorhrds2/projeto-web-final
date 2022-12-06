@@ -1,0 +1,27 @@
+
+  <div class="container-fluid1">
+    <img src="/imagens/PaginaPrincipal/planejamentoObra.jpg" class="card-img-top1" alt="banner">
+    <div>
+      <h1 class="title"> Conexão MRV</h1>
+      <p class="explicacao">Se você ainda não está inscrito no Programa, cadastre-se e garanta os benefícios de ser um
+        Corretor ou Imobiliária parceira na prospecção de terrenos para a MRV&CO.</p>
+      <a href="cadastro/etapa1" class="btn btn-info btn-lg2"
+        style="margin-top: 20px;margin-left: 100px; background-color: #FF8B22; border-color: #FF8B22;"
+        role="button">Quero me inscrever</a>
+    </div>
+  </div>
+
+  <div class="container text-center">
+    <div class="row pt-5">
+      <div class="col-2">
+
+      </div>
+      <div class="col-8">
+        <% for(let i = 0; i < obras.length; i++) {%>
+          <%- include('../Componentes/CardObra/CardObraHome', obras[i]) %>
+        <% } %>
+      </div>
+      <div class="col-2">
+      </div>
+    </div>
+  </div>

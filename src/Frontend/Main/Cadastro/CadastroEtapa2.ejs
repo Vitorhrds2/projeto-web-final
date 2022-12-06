@@ -1,0 +1,45 @@
+    <div class="register-card-container">
+        <div class="register-card">
+            <div class="register-card-logo">
+                <img src="/imagens/Logo-Gradiente.png" alt="Logo">
+            </div>
+            <div class="register-card-header">
+                <h1>Bem vindo a Conexão MRV</h1>
+                <div>
+                    <h3>Conte-nos um pouco sobre você</h3>
+                </div>
+            </div>
+            <form class="register-card-form" method="post" action="">
+                <div class="form-item">
+                    <span>Razão Social</span>
+                    <input type="text" placeholder="Digite a Razão Social" name="razaoSocial" required autofocus>
+                    <% if(error.razaoSocial) {%>
+                        <span id="incorrect-data"><%= error.razaoSocial %></span>
+                    <% }%>
+                </div>
+                <div class="form-item">
+                    <span>CNPJ</span>
+                    <input type="text" id="cnpj" placeholder="Digite o CNPJ" maxlength="18" required name="cnpj">
+                    <% if(error.cnpj){%>
+                        <span id="incorrect-data"><%= error.cnpj %></span>
+                    <% }%>
+                </div>
+                <button type="submit">Continuar</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        const cnpj = document.querySelector('#cnpj')
+
+        cnpj.addEventListener('keypress', () => {
+        let cnpjlength = cnpj.value.length
+
+            if (cnpjlength === 2 || cnpjlength === 6){
+                cnpj.value += "."
+            }else if (cnpjlength === 10){
+                cnpj.value += "/"
+            }else if (cnpjlength === 15){
+                cnpj.value += "-"
+            }
+        })
+    </script>

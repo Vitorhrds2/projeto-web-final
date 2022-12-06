@@ -1,0 +1,99 @@
+<main class="col-8">
+    <!--  Conteúdo principal da página  -->
+    <h1>Usuário</h1>
+    <div class="container">
+        <center>
+            <div class="container-foto">
+                <label for="file-input">
+                    <img class="imagensFoto" src="../../../../imagens/Usuario/empreiteiro-1.jpg" width="200">
+
+                    <div class="middle">
+                        <div class="">
+                            <img src="../../../../imagens/Usuario/edit-icon-png.png" width="140">
+                </label>
+                <input id="file-input" type="file" hidden />
+            </div>
+    </div>
+    </div>
+    </center><br><br>
+
+
+    <div class="input-group mb-3">
+        <form method="post">
+            <div class="row" id="row">
+                <div class="col-12">
+                    <label>Razão social:</label>
+                    <br>
+                    <input type="text" class="form-control" value="<%= user.name%>" aria-label="Username"
+                        aria-describedby="basic-addon1" name="razaoSocial">
+                </div>
+                <div class="col-9">
+                    <label>CNPJ:</label>
+                    <br>
+                    <input type="text" class="form-control" value="<%= user.cnpj %>" aria-label="Username"
+                        aria-describedby="basic-addon1" name="cnpj">
+                </div>
+                <div class="col-6">
+                    <label>Número de Funcionários:</label>
+                    <br>
+                    <input type="text" class="form-control" name="numFuncionarios" value="<%= user.employees_number %>"
+                        aria-label="Username" aria-describedby="basic-addon1">
+                </div>
+                <div class="col-6">
+                    <label>Telefone:</label>
+                    <br>
+                    <input type="text" class="form-control" name="telEmpresa" value="<%= user.cellphone %>"
+                        aria-label="Amount (to the nearest dollar)">
+                </div>
+                <div class="col-6">
+                    <label>E-mail:</label>
+                    <br>
+                    <input type="text" class="form-control" name="email" value="<%= user.email %>"
+                        aria-label="Amount (to the nearest dollar)">
+                </div>
+                <div class="col-9">
+                    <label for="nomeDono">Nome do dono:</label><br>
+                    <input type="text" class="form-control" id="nomeDono" name="nomeDono" value="<%= user.owner_name %>"
+                        aria-label="Amount (to the nearest dollar)">
+                </div>
+                <div class="col-6">
+                    <label>CPF do dono:</label>
+                    <br>
+                    <input type="text" class="form-control" name="cpfDono" value="<%= user.owner_cpf %>"
+                        aria-describedby="basic-addon3">
+                </div>
+                <div class="col-6">
+                    <label>Telefone do dono:</label>
+                    <br>
+                    <input type="text" class="form-control" name="telDono" value="<%= user.owner_cellphone %>"
+                        aria-describedby="basic-addon3">
+                </div>
+                <div class="col-6">
+                    <label>E-mail do contador:</label>
+                    <br>
+                    <input type="text" class="form-control" value="<%=  %>"
+                        aria-describedby="basic-addon3">
+                </div>
+                <div class="col-6">
+                    <label>Telefone do contador:</label>
+                    <br>
+                    <input type="text" class="form-control" value="<%=  %>"
+                        aria-describedby="basic-addon3">
+                </div>
+                <div class="row">
+                    <div class="col-12 d-flex justify-content-center">
+                        <a href="">
+                            <input type="submit" id="button" class="btn btn-success" value="Salvar">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+    </div>
+    </center>
+    <center>
+        
+    </center><br><br>
+    </div>
+</main>

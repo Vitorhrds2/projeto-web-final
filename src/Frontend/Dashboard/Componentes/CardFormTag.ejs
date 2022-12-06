@@ -1,0 +1,12 @@
+<form action="<%= action %>" method="post" class="cardFormTag">
+    <label for="name">Nome</label>
+    <input type="text" name="name" id="name" value="<%= name %>">
+    <div class="actionButtons">
+        <% if(typeof id !='undefined' ) { %>
+            <button type="submit">Editar</button>
+            <a href="/dashboard/tags/<%=id%>/deletar" class="exclusao">Excluir</a>
+        <% } else { %>
+                <button type="submit">Criar</button>
+        <% } %>
+    </div>
+</form>

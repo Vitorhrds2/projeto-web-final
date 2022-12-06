@@ -1,0 +1,14 @@
+<main class="col-10">
+    <div class="container">
+        <div class="row" id="row1">
+            <div class="col-10">
+                <h1>Tags</h1>
+            </div>
+        </div>
+    <div class="row row-tags" id="row">
+        <% tags.map(tag => { %>
+            <%- include('../Componentes/CardFormTag', {action: `/dashboard/tags/${tag.id}`, name: tag.name, id: tag.id}) %>
+        <% }) %>
+        <%- include('../Componentes/CardFormTag', {action: `/dashboard/tags`, name: ''}) %>
+    </div>
+</main>

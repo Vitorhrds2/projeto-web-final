@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head> <!-- Head com imports Boostrap, css e js -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="main/Login/Login.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+    <div class="login-card-container">
+        <div class="login-card">
+            <div class="login-card-logo">
+                <img src="/imagens/Logo-Gradiente.png" alt="Logo">
+            </div>
+            <div class="login-card-header">
+                <h1>Fazer Login</h1>
+                <div>Faça o login para usar a plataforma</div>
+            </div>
+            <form class="login-card-form" method="post">
+                <div class="form-item">
+                    <span id="form-item-icon" class="material-symbols-outlined">mail</span>
+                    <input type="text" placeholder="Digite Seu Email" name='email' required autofocus>
+                    <% if(error.email) {%>
+                        <span id="incorrect-data"><%= error.email %></span>
+                    <% }%>
+                </div>
+                <div class="form-item">
+                    <span id="form-item-icon" class="material-symbols-outlined">lock</span>
+                    <input type="password" name='password' placeholder="Digite Sua Senha" required>
+                    <% if(error.password) {%>
+                        <span id="incorrect-data"><%= error.password %></span>
+                    <% }%>
+                </div>
+                <div class="form-item-other">
+                    <div class="checkbox">
+                        <input type="checkbox" id="rememberMeCheckBox">
+                        <label for="rememberMeCheckBox">Salvar informações de login</label>
+                    </div>
+                    <a href="#">Esqueci minha senha</a>
+                </div>
+                <button type="submit">Entrar</button>
+            </form>
+            <div class="login-card-footer">
+                Não possui cadastro? <a href="/cadastro/etapa1">Crie sua conta aqui</a>
+            </div>
+        </div>
+        <div class="login-card-social">
+            <div>Entrar Com:</div>
+            <div class="login-card-social-btn">
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-facebook"
+                        width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3"></path>
+                    </svg>
+                </a>
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-google" width="24"
+                        height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M17.788 5.108a9 9 0 1 0 3.212 6.892h-8"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

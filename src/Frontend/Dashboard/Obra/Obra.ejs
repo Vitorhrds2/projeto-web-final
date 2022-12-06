@@ -1,0 +1,95 @@
+<main class="col-8">
+    <!--  Conteúdo principal da página  -->
+    <h1>Obra</h1>
+    <div class="container">
+        <center>
+            <button class="imgBorder" onclick="showModal('modal-1')">
+                <img class="imagensFoto" src="../../../../imagens/Obra/obra-1.jpg" width="280">
+            </button>
+            <button class="imgBorder" onclick="showModal('modal-2')">
+                <img class="imagensFoto" src="../../../../imagens/Obra/obra-2.jpg" width="165">
+            </button>
+            <button class="imgBorder" onclick="showModal('modal-3')">
+                <img class="imagensFoto" src="../../../../imagens/Obra/obra-3.jpg" width="190">
+            </button>
+
+            <div class="modal" id="modal-1">
+                <div class="modal-content">
+                    <span class="close-button" onclick="closeModal('modal-1')">
+                        &times;
+                    </span>
+                    <center>
+                        <img class="imagensFoto" src="../../../../imagens/Obra/obra-1.jpg" width="650">
+                    </center>
+                </div>
+            </div>
+            <div class="modal" id="modal-2">
+                <div class="modal-content">
+                    <span class="close-button" onclick="closeModal('modal-2')">
+                        &times;
+                    </span>
+                    <center>
+                        <img class="imagensFoto" src="../../../../imagens/Obra/obra-2.jpg" width="650">
+                    </center>
+                </div>
+            </div>
+            <div class="modal" id="modal-3">
+                <div class="modal-content">
+                    <span class="close-button" onclick="closeModal('modal-3')">
+                        &times;
+                    </span>
+                    <center>
+                        <img class="imagensFoto" src="../../../../imagens/Obra/obra-3.jpg" width="650">
+                    </center>
+                </div>
+            </div>
+
+        </center><br>
+
+
+        <div class="input-group mb-3">
+            <form method="post">
+                <div class="row" id="row" style="border-radius: 10px;">
+                    <div class="col-6">
+                                <label for="tituloObra">Título:</label>
+                                <input type="text" class="form-control" id="tituloObra" name="name" placeholder="Digite o Nome da Obra:"
+                                    aria-describedby="basic-addon3">
+                    </div>
+                    <div class="col-6">
+                            <label for="localObra">Localização:</label>
+                            <input type="text" name="city_id" class="form-control" id="localObra"
+                                placeholder="Digite aqui a localização da obra:" aria-describedby="basic-addon3">
+                    </div>
+                </div>
+                <div class="row" id="row" style="border-radius: 10px;">
+                    <div class="col-4">
+                        <label for="descObra">Descrição:</label>
+                            <textarea rows="12" cols="50" type="text" name="description" class="form-control" id="descObra"
+                            placeholder="Digite aqui a descrição da obra:" aria-describedby="basic-addon3"></textarea>
+                    </div>
+                    <div class="col-5">
+                        <label for="imgObra">Imagem principal:</label>
+                        <input type="file" id="imgObraPrincipal" name="imgPrinc" accept="image/*"
+                        class="btn btn-outline-warning">
+                        <br>
+                        <label for="imgObra">Outras imagens:</label>
+                        <input type="file" id="imgObraSecundaria" name="imgSec" accept="image/*"
+                        class="btn btn-outline-warning">
+                        <br>
+                        <label for="imgObra">Imagem da planta:</label>
+                        <input type="file" id="imgObraPlanta" name="imgPlanta" accept="image/*"
+                        class="btn btn-outline-warning">
+                        
+                    </div>
+                </div>    
+                <div class="col-12 d-flex justify-content-center">
+                    <a href="">
+                        <input type="submit" id="button" class="btn btn-success" value="Salvar">
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <center>
+    </center>
+</main>

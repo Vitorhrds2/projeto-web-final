@@ -1,0 +1,44 @@
+    <div class="register-card-container">
+        <div class="register-card">
+            <div class="register-card-logo">
+                <img src="/imagens/Logo-Gradiente.png" alt="Logo">
+            </div>
+            <div class="register-card-header">
+                <h1>Dados do Contador</h1>
+            </div>
+            <form class="register-card-form" method="post" action="">
+                <div class="form-item">
+                    <span>E-mail do contador</span>
+                    <input type="text" placeholder="E-mail do contador" name="emailContador" required autofocus>
+                    <% if(error.emailContador){%>
+                        <span id="incorrect-data"><%= error.emailContador %></span>
+                    <% }%>
+                </div>
+                <div class="form-item">
+                    <span>Telefone do Contador</span>
+                    <input type="text" id="tel_contador" placeholder="Telefone do contador" name="telContador" maxlength="16" required>
+                    <% if(error.telContador){%>
+                        <span id="incorrect-data"><%= error.telContador %></span>
+                    <% }%>
+                </div>
+                <button type="submit">Continuar</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        const tel_contador = document.querySelector('#tel_contador')
+
+        tel_contador.addEventListener('keypress', () => {
+            let tel_contadorlength = tel_contador.value.length
+
+            if (tel_contadorlength === 0){
+                tel_contador.value += "("
+            }else if (tel_contadorlength === 3){
+                tel_contador.value += ") "
+            }else if (tel_contadorlength === 6){
+                tel_contador.value += " "
+            }else if (tel_contadorlength === 11){
+                tel_contador.value += "-"
+            }
+        })
+    </script>
